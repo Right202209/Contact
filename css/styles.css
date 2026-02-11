@@ -40,26 +40,30 @@ body {
 
 main {
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
+  min-height: 100dvh;
   position: relative;
   overflow: hidden;
 }
 
 .content {
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
+  min-height: 100dvh;
   position: relative;
 }
 
 .wrap {
-  width: 100%;
-  height: 100vh;
+  width: min(860px, 100%);
+  min-height: 100vh;
+  min-height: 100dvh;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 0 24px;
+  padding: 32px 24px;
   gap: 14px;
 }
 
@@ -144,6 +148,10 @@ main {
   overflow: hidden;
 }
 
+.social-link:active {
+  transform: translateY(-1px) scale(1.02);
+}
+
 .social-link::before {
   content: "";
   position: absolute;
@@ -172,44 +180,19 @@ main {
   outline-offset: 2px;
 }
 
-.arrow {
-  position: absolute;
-  left: 50%;
-  bottom: 4%;
-  transform: translate3d(-50%, 0, 0);
-  width: 16px;
-  height: 16px;
+.empty-state {
+  margin: 12px 0 0;
+  font-size: 0.85rem;
+  color: var(--color-note);
+  opacity: 0.9;
 }
 
-.arrow::before,
-.arrow::after {
-  background: #fff;
-  content: "";
-  display: block;
-  height: 3px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 13px;
-  box-shadow: 1px 1px 20px 0 #fff;
-}
-
-.arrow::before {
-  transform: rotate(45deg) translateX(-10%);
-  transform-origin: top left;
-}
-
-.arrow::after {
-  transform: rotate(-45deg) translateX(10%);
-  transform-origin: top right;
-}
-
-.arrow-1 {
-  animation: arrow-movement 2s ease-in-out infinite;
-}
-
-.arrow-2 {
-  animation: arrow-movement 2s 1s ease-in-out infinite;
+.noscript-tip {
+  margin: 20px auto 0;
+  max-width: 44ch;
+  font-size: 0.85rem;
+  color: var(--color-note);
+  text-align: center;
 }
 
 @keyframes whiteShadow {
@@ -246,31 +229,24 @@ main {
   }
 }
 
-@keyframes arrow-movement {
-  0% {
-    opacity: 0;
-    top: 92%;
-  }
-  70% {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
-  }
-}
-
 @media screen and (max-width: 50em) {
+  .wrap {
+    padding: 24px 18px;
+  }
+
   .content-title {
     font-size: 2.4rem;
+  }
+
+  .social {
+    gap: 12px;
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
   .content-title,
   .content-subtitle span,
-  .social-link,
-  .arrow-1,
-  .arrow-2 {
+  .social-link {
     animation: none !important;
   }
 }

@@ -15,6 +15,7 @@ window.CONTACT_CONFIG = {
     note: "Hello World~",
   },
   contactsShow: true,
+  emptyStateText: "No contact methods available right now.",
   theme: {
     backgroundStart: "#313131",
     backgroundEnd: "#0a0a0a",
@@ -52,12 +53,12 @@ window.CONTACT_CONFIG = {
       icon: "MU",
     },
     {
-      show: true,
+      show: false,
       label: "RSS",
       url: "",
       color: "#ffa500",
       icon: "RS",
-      iconName: "rss"
+      iconName: "rss",
     },
     {
       show: true,
