@@ -1,0 +1,304 @@
+html {
+  --color-link: #5f5f5f;
+  --color-link-hover: #ff963b;
+  --color-enter: #fff;
+  --color-title: #fff;
+  --color-content: #222325;
+  --color-subtitle: rgba(255, 255, 255, 0.85);
+  --color-note: rgba(255, 255, 255, 0.75);
+  --color-chip: rgba(255, 255, 255, 0.12);
+  --font-alt: 200 6vw/1 "Comic Sans MS", "Helvetica Neue", "Microsoft Yahei", -apple-system, sans-serif;
+  scroll-behavior: smooth;
+  font-size: 20px;
+}
+
+@font-face {
+  font-family: "iconfont";
+  src: url("//at.alicdn.com/t/c/font_4430131_h2ji88mpnj.eot?t=1706779383923");
+  src: url("//at.alicdn.com/t/c/font_4430131_h2ji88mpnj.eot?t=1706779383923#iefix") format("embedded-opentype"),
+    url("//at.alicdn.com/t/c/font_4430131_h2ji88mpnj.woff2?t=1706779383923") format("woff2"),
+    url("//at.alicdn.com/t/c/font_4430131_h2ji88mpnj.woff?t=1706779383923") format("woff"),
+    url("//at.alicdn.com/t/c/font_4430131_h2ji88mpnj.ttf?t=1706779383923") format("truetype"),
+    url("//at.alicdn.com/t/c/font_4430131_h2ji88mpnj.svg?t=1706779383923#iconfont") format("svg");
+}
+
+.iconfont {
+  font-family: "iconfont";
+  font-size: 20px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-github:before {
+  content: "\e885";
+}
+
+.icon-email:before {
+  content: "\e66f";
+}
+
+.icon-X:before {
+  content: "\e646";
+}
+
+.icon-bokeyuan:before {
+  content: "\e603";
+}
+
+.icon-xiaolian:before {
+  content: "\e610";
+}
+
+.icon-xianxing-_fasong:before {
+  content: "\e61f";
+}
+
+.icon-xianxing-_shuoming:before {
+  content: "\e621";
+}
+
+.icon-dianzan:before {
+  content: "\e620";
+}
+
+.icon-shoucang:before {
+  content: "\e623";
+}
+
+.icon-tupian:before {
+  content: "\e625";
+}
+
+* {
+  box-sizing: border-box;
+  -webkit-text-size-adjust: none;
+}
+
+body,
+html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+body {
+  font-family: "Comic Sans MS", "Helvetica Neue", "Microsoft Yahei", -apple-system, sans-serif;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: radial-gradient(#313131, #0a0a0a);
+  color: var(--color-title);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: url(https://cdn.jsdelivr.net/gh/Tomotoes/images/blog/default.cur), auto;
+}
+
+main {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.content {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+
+.wrap {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 24px;
+  gap: 14px;
+}
+
+.content-title {
+  font-family: "Comic Sans MS", "Helvetica Neue", "Microsoft Yahei", -apple-system, sans-serif;
+  font-size: clamp(2.4rem, 6vw, 4.7rem);
+  font-weight: 200;
+  color: var(--color-title);
+  line-height: 1.05;
+  margin: 0.4em 0 0.1em;
+  animation: whiteShadow 1.5s ease-in-out infinite alternate;
+  text-shadow: #452d2d 0 0 1px, #fffffb 0 0 1px, #fffffb 0 0 2px;
+}
+
+.content-subtitle {
+  color: var(--color-subtitle);
+  font-family: "Comic Sans MS", "Helvetica Neue", "Microsoft Yahei", -apple-system, sans-serif;
+  font-size: clamp(0.85rem, 2.6vw, 1.2rem);
+  font-weight: 200;
+  margin: 0.2em 0 0.5em;
+  text-shadow: 0 0 4px #fff;
+  display: inline-flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.content-subtitle span {
+  animation: letter-glow 0.7s 0s ease both;
+}
+
+.alias {
+  display: inline-flex;
+  align-items: center;
+  min-height: 1.6em;
+  padding: 0.15em 0.55em;
+  border-radius: 999px;
+  background: var(--color-chip);
+  color: #fff;
+  font-size: 0.86em;
+  letter-spacing: 0.06em;
+}
+
+.note {
+  margin: 0.4em auto 0.6em;
+  color: var(--color-note);
+  font-weight: 200;
+  font-size: clamp(0.85rem, 2vw, 1rem);
+  line-height: 1.7;
+  max-width: 56ch;
+}
+
+.social {
+  margin: 18px 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  padding: 0;
+  list-style: none;
+  justify-content: center;
+}
+
+.social-link {
+  width: 46px;
+  height: 46px;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  transform: translateY(12px);
+  opacity: 0;
+  animation: fade-up 520ms ease-out forwards;
+  transition: transform 180ms ease, filter 180ms ease;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+  cursor: url(https://cdn.jsdelivr.net/gh/Tomotoes/images/blog/pointer.cur), auto;
+}
+
+.social-link:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.12);
+}
+
+.social-link:focus-visible {
+  outline: 2px solid rgba(255, 255, 255, 0.6);
+  outline-offset: 2px;
+}
+
+.arrow {
+  position: absolute;
+  left: 50%;
+  bottom: 4%;
+  transform: translate3d(-50%, 0, 0);
+  width: 16px;
+  height: 16px;
+}
+
+.arrow::before,
+.arrow::after {
+  background: #fff;
+  content: "";
+  display: block;
+  height: 3px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 13px;
+  box-shadow: 1px 1px 20px 0 #fff;
+}
+
+.arrow::before {
+  transform: rotate(45deg) translateX(-10%);
+  transform-origin: top left;
+}
+
+.arrow::after {
+  transform: rotate(-45deg) translateX(10%);
+  transform-origin: top right;
+}
+
+.arrow-1 {
+  animation: arrow-movement 2s ease-in-out infinite;
+}
+
+.arrow-2 {
+  animation: arrow-movement 2s 1s ease-in-out infinite;
+}
+
+@keyframes whiteShadow {
+  0% {
+    text-shadow: 0 0 1px #fff, 0 0 2px #fff, 0 0 3px #fff, 0 0 5px #333, 0 0 8px #333, 0 0 9px #333, 0 0 10px #333, 0 0 15px #333;
+  }
+  to {
+    text-shadow: 0 0 0.5px #fff, 0 0 1px #fff, 0 0 1.5px #fff, 0 0 2px #333, 0 0 4px #333, 0 0 5px #333, 0 0 6px #333, 0 0 8px #333;
+  }
+}
+
+@keyframes letter-glow {
+  0% {
+    opacity: 0;
+    text-shadow: 0 0 1px hsla(0, 0%, 100%, 0.1);
+  }
+  66% {
+    opacity: 1;
+    text-shadow: 0 0 20px hsla(0, 0%, 100%, 0.9);
+  }
+  77% {
+    opacity: 1;
+  }
+  to {
+    opacity: 0.7;
+    text-shadow: 0 0 20px hsla(0, 0%, 100%, 0.2);
+  }
+}
+
+@keyframes fade-up {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes arrow-movement {
+  0% {
+    opacity: 0;
+    top: 92%;
+  }
+  70% {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@media screen and (max-width: 50em) {
+  .content-title {
+    font-size: 2.4rem;
+  }
+}
