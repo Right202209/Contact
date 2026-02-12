@@ -62,9 +62,9 @@ window.CONTACT_CONFIG = {
       icon: "MU",
     },
     {
-      show: false,
+      show: true,
       label: "RSS",
-      url: "",
+      url: "https://right202209.github.io/blog/feed.xml",
       color: "#ffa500",
       icon: "RS",
       iconName: "rss",
@@ -86,6 +86,6 @@ window.CONTACT_CONFIG = {
       color: "#f00000",
       icon: "Ins",
       iconName: "instagram",
-    },
+    }
   ],
 };
