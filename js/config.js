@@ -86,6 +86,15 @@ window.CONTACT_CONFIG = {
       color: "#f00000",
       icon: "Ins",
       iconName: "instagram",
+    },
+    {
+      show: true,
+      label: "Temp Email",
+      url: "https://droite.dpdns.org",
+      newTab: true,
+      color: "#d44638",
+      icon: "EM",
+      iconName: "email",
     }
   ],
 };
