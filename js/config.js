@@ -48,7 +48,7 @@ window.CONTACT_CONFIG = {
     {
       show: true,
       label: "Email",
-      url: "mailto:tunhe38@gmail.com",
+      url: "mailto:right202601@gmail.com",
       newTab: true,
       color: "#d44638",
       icon: "EM",
