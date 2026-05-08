@@ -1,3 +1,58 @@
+/**
+ * @typedef {Object} PageConfig
+ * @property {string} title - Browser tab title.
+ * @property {string} language - HTML lang attribute (e.g. "en", "zh-CN").
+ *
+ * @typedef {Object} EyesConfig
+ * @property {number} [maxOffsetRatio] - How far the pupil can travel inside the eye (0–1).
+ * @property {number} [eyeTiltMax] - Max per-eye tilt in degrees.
+ * @property {number} [containerTiltMax] - Max container tilt in degrees.
+ * @property {boolean} [autoBlink] - Whether eyes blink automatically.
+ *
+ * @typedef {Object} HeroConfig
+ * @property {boolean} [show] - Show the heading line.
+ * @property {boolean} [showAlias] - Show the alias chip.
+ * @property {boolean} [showNote] - Show the note (eyes or text).
+ * @property {"eyes"|"text"} [noteMode] - "eyes" widget or plain "text".
+ * @property {string} [intro] - Text before name (e.g. "Hi, I'm").
+ * @property {string} [name] - Your displayed name.
+ * @property {string} [suffix] - Punctuation after name (e.g. ".").
+ * @property {string} [callToAction] - Subtitle text (e.g. "You can call me").
+ * @property {string} [alias] - Alias chip text.
+ * @property {string} [note] - Note text when noteMode === "text".
+ * @property {EyesConfig} [eyes] - Eye widget tuning.
+ *
+ * @typedef {Object} ThemeConfig
+ * @property {string} [backgroundStart] - Top-of-page background color.
+ * @property {string} [backgroundEnd] - Bottom-of-page background color.
+ * @property {string} [titleColor]
+ * @property {string} [subtitleColor]
+ * @property {string} [noteColor]
+ * @property {string} [aliasBackground] - Alias chip background color.
+ * @property {string} [eyePupilColor]
+ * @property {string} [eyeWhiteColor]
+ * @property {string} [cursorDefault] - CSS cursor value for the default cursor.
+ * @property {string} [cursorPointer] - CSS cursor value for hover state.
+ *
+ * @typedef {Object} ContactItem
+ * @property {boolean} [show] - Render this entry.
+ * @property {string} label - Accessible label and tooltip.
+ * @property {string} url - http(s):// or mailto:
+ * @property {boolean} [newTab] - Open link in new tab (default true).
+ * @property {string} [color] - Background color of the link button.
+ * @property {string} [icon] - 1–2 letter fallback when iconName is unknown.
+ * @property {string} [iconName] - One of the keys in CONTACT_ICONS (see js/icons.js).
+ *
+ * @typedef {Object} ContactConfig
+ * @property {PageConfig} page
+ * @property {HeroConfig} [hero]
+ * @property {boolean} [contactsShow] - Render the contact section.
+ * @property {string} [emptyStateText] - Shown when no valid contacts exist.
+ * @property {ThemeConfig} [theme]
+ * @property {ContactItem[]} [contacts]
+ */
+
+/** @type {ContactConfig} */
 window.CONTACT_CONFIG = {
   page: {
     title: "Contact - Your Name",

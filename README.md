@@ -4,6 +4,8 @@ A configurable static contact page template with homepage-style typography, glow
 
 ## Features
 - Single-file configuration (`js/config.js`)
+- **Interactive setup wizard** — `npm run init` (English / 中文)
+- **Editor autocomplete** via JSDoc `@typedef` annotations
 - Built-in SVG icon catalog for popular platforms
 - Themeable colors and cursors via CSS variables
 - Optional interactive eyes that follow the pointer
@@ -16,14 +18,20 @@ A configurable static contact page template with homepage-style typography, glow
 - `js/config.js` All configurable content and theme (start here)
 - `js/icons.js` Built-in SVG icon catalog
 - `js/app.js` Render logic
+- `scripts/init.js` Interactive setup wizard
 - `assets/` Reserved for images or icons
 
 ## Use as a Template
 1. Click **Use this template** on GitHub (or fork/clone the repo).
-2. Open `js/config.js` and replace placeholder values with your own.
-3. Optionally tweak `theme` colors and the `hero` section.
-4. Toggle each entry in `contacts[]` with `show: true/false`.
-5. Deploy as a static site (GitHub Pages, Netlify, Vercel, Cloudflare Pages, etc.).
+2. Run the interactive setup wizard:
+   ```bash
+   npm run init
+   ```
+   You'll be asked to choose a language (English / 中文) first, then walked through your name, hero text, and contact links. The wizard rewrites `js/config.js` for you.
+3. Or skip the wizard and edit `js/config.js` directly — the file ships with `@typedef` JSDoc, so editors like VS Code give you autocomplete and inline docs for every field.
+4. Tweak `theme` colors and the `hero` section as desired.
+5. Toggle each entry in `contacts[]` with `show: true/false`.
+6. Deploy as a static site (GitHub Pages, Netlify, Vercel, Cloudflare Pages, etc.).
 
 ## Quick Start
 Open `index.html` directly in a browser, or run a local static server:

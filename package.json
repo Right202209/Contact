@@ -4,6 +4,7 @@
   "version": "1.0.0",
   "description": "A configurable static contact page template",
   "scripts": {
-    "dev": "npx --yes http-server -p 5173 -c-1"
+    "dev": "npx --yes http-server -p 5173 -c-1",
+    "init": "node scripts/init.js"
   }
 }
