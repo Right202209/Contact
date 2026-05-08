@@ -1,8 +1,8 @@
 {
-  "name": "contact-static-page",
+  "name": "contact-page-template",
   "private": true,
   "version": "1.0.0",
-  "description": "Static contact page",
+  "description": "A configurable static contact page template",
   "scripts": {
     "dev": "npx --yes http-server -p 5173 -c-1"
   }
